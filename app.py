@@ -105,7 +105,7 @@ def gpa(a):
         creditrow = cr[3].split("+")
 
         for i in range(0, len(creditrow)):
-            creditrow[i] = int(creditrow[i])
+            creditrow[i] = float(creditrow[i])
         print(sum(creditrow))
         credit.append(sum(creditrow))
 
