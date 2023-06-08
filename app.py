@@ -106,22 +106,22 @@ def gpa(a):
         creditrow = cr[3].split("+")
 
         for i in range(0, len(creditrow)):
-            creditrow[i] = float(creditrow[i])
+            creditrow[i] = int(creditrow[i])
         print(sum(creditrow))
         credit.append(sum(creditrow))
 
     print(credit)
     print(lis)
-    summ = 0
-    for i in range(0, len(credit)):
-        summ = summ+(credit[i]*lis[i])
-    print(summ)
-    cgpa = summ/sum(credit)
+    # summ = 0
+    # for i in range(0, len(credit)):
+    #     summ = summ+(credit[i]*lis[i])
+    # print(summ)
+    # cgpa = round(summ/sum(credit),4)
 
-    # summ=0
-    # for i in lis:
-    # 	summ=summ+i
-    # cgpa=summ/len(lis)
+    summ=0
+    for i in lis:
+    	summ=summ+i
+    cgpa=round(summ/len(lis),4)
     return cgpa
 
 
