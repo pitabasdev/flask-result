@@ -7,7 +7,7 @@ from werkzeug.utils import secure_filename
 import telebot
 
 
-API_KEY = 'AAHmp6imYj5esIxdv644f2Ryir2jUfq8WJ8'
+API_KEY = os.environ['API_KEY']
 bot = telebot.TeleBot(API_KEY)
 
 
