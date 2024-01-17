@@ -70,7 +70,7 @@ def readallfiles(filelist):
     for i in range(len(filelist)):
         print("Inserting :: " + filelist[i] + " to SQLite Database")
         df = pd.read_excel("./results/" + filelist[i], names=[
-                           "SlNo.", "REGD.NO", "NAMEOFTHESTUDENT", "Sem", "SUB.CODE", "SUBJECTNAME", "Type", "Credit", "Grade"])
+                           "SlNo.", "REGD.NO", "NAMEOFTHESTUDENT", "Sem", "SUB.CODE", "SUBJECTNAME", "Type", "Credit", "Grade"],engine='openpyxl')
         df.to_sql('sheet1', con=sqlite3.connect(
             'a.db'), if_exists='append', index=False)
     print("\nAll files are inserted to SQLite Database")
